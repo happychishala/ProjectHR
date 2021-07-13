@@ -10,8 +10,18 @@ module.exports = {
         './resources/js/**/*.vue',
     ],
 
-    theme: {
+    theme: {    
         extend: {
+            colors:{
+                blue:{
+                    grey:'#EFF3FF',
+                },
+                status:{
+                    pending:'#84E8F4',
+                    declined:'#F87957',
+                    approved:'#1BBA6E',
+                }
+        },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
