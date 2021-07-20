@@ -1700,6 +1700,9 @@ select{
 .font-bold{
 	font-weight: 700;
 }
+.font-black{
+	font-weight: 900;
+}
 .uppercase{
 	text-transform: uppercase;
 }
@@ -1931,6 +1934,10 @@ select{
 	--tw-bg-opacity: 1;
 	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
+.hover\:bg-green-main:hover{
+	--tw-bg-opacity: 1;
+	background-color: rgba(27, 186, 110, var(--tw-bg-opacity));
+}
 .hover\:text-gray-500:hover{
 	--tw-text-opacity: 1;
 	color: rgba(107, 114, 128, var(--tw-text-opacity));
@@ -1950,6 +1957,10 @@ select{
 .hover\:text-gray-900:hover{
 	--tw-text-opacity: 1;
 	color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+.hover\:text-white:hover{
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 .hover\:opacity-50:hover{
 	opacity: 0.5;

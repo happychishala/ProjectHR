@@ -1,6 +1,6 @@
 <template>
   <nav>
-                     <div class ="bg-blue-grey h-screen font-body">
+                     <div class ="bg-blue-grey h-screen font-body  border-r border-green-main">
                          <div class = "title mb px-16 pt-6 pb-16">
                           <jet-Application-Logo :href="route('dashboard')" :active="route().current('dashboard')">                           
                           </jet-Application-Logo>
@@ -11,29 +11,29 @@
                                     <hr>
                                     </div>
                              <div class="main-modules flex flex-row flex-wrap justify-center  my-10 ">  
-                                <inertia-link href="">
+                                <inertia-link :href="route('dashboard')" :active="route().current('dashboard')">
                                 <div class="dashbaord p-3 mx-3 text-center  hover:shadow-lg">
                                      <div class = "w-10 h-8 bg-white m-auto rounded-md text-center shadow-md"> <img :src="'/assets/icons/dash.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash"> </div>
-                                   <p class = "text-xs font-medium mt-2">Dashboard</p>
+                                   <p class = "text-xs font-body font-bold mt-2">Dashboard</p>
                                 </div>
                                 </inertia-link>
                                 <inertia-link href>
                                 <div class="payroll p-3 mx-3 text-center   hover:shadow-lg">
                                         <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md "><img :src="'/assets/icons/money.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
-                                   <p class = "text-xs font-medium mt-2">Payroll</p>
+                                   <p class = "text-xs font-body font-bold mt-2">Payroll</p>
                                 </div>
                                 </inertia-link>
                                   <inertia-link href="">
                                      <div class="employes p-3 mx-3 text-center    hover:shadow-lg">
                                         <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/emp.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
-                                            <p class = "text-xs font-medium mt-2">   Employees </p>
+                                            <p class = "text-xs font-body font-bold mt-2">   Employees </p>
                                 </div>
                                   </inertia-link>
 
                                   <inertia-link href="">
                                  <div class="employes p-3 mx-3 text-center    hover:shadow-lg">
                                          <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/training.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
-                             <p class = "text-xs font-medium mt-2">   Training </p>
+                                          <p class = "text-xs font-body font-bold mt-2">   Training </p>
                                 </div>
                                 </inertia-link>
 
@@ -46,20 +46,27 @@
                                    <inertia-link href="">
                                     <div class="training p-3 mx-3 text-center   hover:shadow-lg">
                                             <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/dept.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
-                                      <p class = "text-xs font-medium mt-2"> Department</p>
+                                      <p class = "text-xs font-body font-bold mt-2"> Department</p>
                                     </div>
                                     </inertia-link>
                                     <inertia-link href="">
                                     <div class="departments p-3 mx-3 text-center    hover:shadow-lg">
                                             <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md" > <img :src="'/assets/icons/leave.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
-                                       <p class = "text-xs font-medium mt-2"> Leave </p>
+                                       <p class = "text-xs font-body font-bold mt-2"> Leave </p>
+                                    </div>
+                                    </inertia-link>
+
+                                    <inertia-link href="">
+                                    <div class="training p-3 mx-3 text-center   hover:shadow-lg">
+                                            <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/dept.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
+                                      <p class = "text-xs font-body font-bold mt-2"> Resignation</p>
                                     </div>
                                     </inertia-link>
 
                                     <inertia-link href="">
                                     <div class="departments p-3 mx-3 text-center   hover:shadow-lg">
                                             <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/user.png'" class = "m-auto inline-block align-middle" style = "width:20px;" alt="dash"> </div>
-                                      <p class = "text-xs font-medium mt-2">  Users </p>
+                                      <p class = "text-xs font-body font-bold mt-2">  Users </p>
                                     </div>
                                     </inertia-link>
                                 </div>

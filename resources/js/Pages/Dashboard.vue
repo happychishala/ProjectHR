@@ -2,7 +2,7 @@
     <app-layout>
 <div>
     <div class="heading">
-        <h3 class = "p-3 opacity-60 font-body">Dashbaord</h3>
+        <h3 class = "p-3 opacity-60 font-body font-bold">Dashbaord</h3>
     </div>
         <div class="py-3  w-full " >
             <div class="container w-full  flex flex-wrap   items-stretch   mb-7  justify-center  h-20">
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="notification  ">
-                <h3  class = "p-3 opacity-60 font-body  font-bold"> Notification</h3>
+             <h3 class = "p-3 opacity-60 font-body font-bold">Notications</h3>
             </div>
             <div class="bottom-bar container  p-7 flex flex-row w-full">
                 <div class = "leaveApp h-64 mx-3 bg-blue-grey w-2/5 shadow-md sm:rounded">
