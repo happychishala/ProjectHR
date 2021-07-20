@@ -11,9 +11,9 @@
                   <!--  <welcome />-->
                   <div>
                  <h2 class = "font-body font-bold uppercase">- Total employees -</h2>
-                 <p classs = "font-body font-medium text-xs ">Total human resource in the organisation</p>
+                  <p class = " font-body font-medium text-xs"> Total human resource in the organization</p>
                  </div>
-                 <h3 class =" count text-lg opacity-20 font-body font-bold "> 300</h3>
+                 <h3 class =" count text-lg opacity-10 font-body font-bold "> 300</h3>
                 </div>
               
                 
@@ -23,7 +23,7 @@
                    <h2 class = "font-body font-bold uppercase">-Present- </h2>
                      <p class = "font-body font-medium text-xs"> Employees currently reporting for work</p>
                    </div>
-                 <h3 class = "count text-lg opacity-20 font-body font-bold ">187</h3>
+                 <h3 class = "count text-lg opacity-10 font-body font-bold ">187</h3>
                 </div>
                   <div class="bg-white overflow-hidden shadow-md sm:rounded flex flex-wrap  w-96 h-full p-10 transition transition-shadow duration-300 ease-in-out  hover:shadow-lg bg-blue-grey sm:mb-3">
                   <!--  <welcome />-->
@@ -31,7 +31,7 @@
                     <h3 class = "font-body font-bold uppercase"> -On Leave- </h3>
                      <p class = " font-body font-medium text-xs"> Employees currently on Leave</p>
                     </div>
-                          <h3 class = "count text-lg opacity-20 font-body font-bold ">12</h3>
+                          <h3 class = "count text-lg opacity-10 font-body font-bold ">12</h3>
                 </div>
             </div>
             <div class="notification  ">
@@ -40,7 +40,7 @@
             <div class="bottom-bar container  p-7 flex flex-row w-full">
                 <div class = "leaveApp h-64 mx-3 bg-blue-grey w-2/5  shadow-md sm:rounded">
                     <div class="laevnot container m-auto p-3   sm:rounded-sm">
-                        <p class = "bg-white p-1 py-3 font-body font-medium shadow-sm "><small class = "font-body font-body m-auto uppercase opacity-30">Leave Applications</small></p>
+                        <p class = "bg-green-main text-white rounded leading-normal text-xs py-3 font-body font-medium shadow-md "><span class = "font-body pl-3 font-bold m-auto uppercase ">Leave Applications</span></p>
                     </div>
                     <div class="applica overflow-hidden p-2">
                         <inertia-link href="">
@@ -86,7 +86,7 @@
 
     import AppLayout from '@/Layouts/AppLayout'
     import Welcome from '@/Jetstream/Welcome'
-    import Tabs from '@/Pages/Tabs'
+    import Tabs from '@/Components/Tabs'
 
     export default {
         components: {

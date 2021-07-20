@@ -1,13 +1,5 @@
 <template>
     <jet-action-section>
-        <template #title>
-            Two Factor Authentication
-        </template>
-
-        <template #description>
-            Add additional security to your account using two factor authentication.
-        </template>
-
         <template #content>
             <h3 class="text-lg font-medium text-gray-900" v-if="twoFactorEnabled">
                 You have enabled two factor authentication.
@@ -17,7 +9,7 @@
                 You have not enabled two factor authentication.
             </h3>
 
-            <div class="mt-3 max-w-xl text-sm text-gray-600">
+            <div class="mt-3   text-sm text-gray-600">
                 <p>
                     When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.
                 </p>

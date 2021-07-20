@@ -1398,6 +1398,9 @@ select{
 .gap-1{
 	gap: 0.25rem;
 }
+.gap-3{
+	gap: 0.75rem;
+}
 .space-x-8 > :not([hidden]) ~ :not([hidden]){
 	--tw-space-x-reverse: 0;
 	margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -2360,6 +2363,9 @@ select{
 	}
 	.sm\:p-6{
 		padding: 1.5rem;
+	}
+	.sm\:p-3{
+		padding: 0.75rem;
 	}
 	.sm\:px-6{
 		padding-left: 1.5rem;

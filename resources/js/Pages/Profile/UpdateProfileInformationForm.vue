@@ -1,13 +1,6 @@
 <template>
     <jet-form-section @submitted="updateProfileInformation">
-        <template #title>
-            Profile Information
-        </template>
-
-        <template #description>
-            Update your account's profile information and email address.
-        </template>
-
+     
         <template #form>
             <!-- Profile Photo -->
             <div class="col-span-6 sm:col-span-4" v-if="$page.props.jetstream.managesProfilePhotos">
@@ -31,11 +24,11 @@
                 </div>
 
                 <jet-secondary-button class="mt-2 mr-2" type="button" @click.prevent="selectNewPhoto">
-                    Select A New Photo
+                    <small class = "text-xs uppercase font-body font-bold"> Select New</small>
                 </jet-secondary-button>
 
                 <jet-secondary-button type="button" class="mt-2" @click.prevent="deletePhoto" v-if="user.profile_photo_path">
-                    Remove Photo
+                     <small class = "text-xs uppercase font-body font-bold"> Remove Photo</small>
                 </jet-secondary-button>
 
                 <jet-input-error :message="form.errors.photo" class="mt-2" />
