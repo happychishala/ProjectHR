@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+
 module.exports = {
     mode: 'jit',
     purge: [
@@ -16,6 +17,9 @@ module.exports = {
                 blue:{
                     grey:'#EFF3FF',
                 },
+                green:{
+                    main: '#1BBA6E',
+                },
                 status:{
                     pending:'#84E8F4',
                     declined:'#F87957',
@@ -24,6 +28,7 @@ module.exports = {
         },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                body:['Roboto'],
             },
         },
     },

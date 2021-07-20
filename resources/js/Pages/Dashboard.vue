@@ -2,15 +2,15 @@
     <app-layout>
 <div>
     <div class="heading">
-        <h3 class = "p-3 opacity-60">Dashbaord</h3>
+        <h3 class = "p-3 opacity-60 font-body">Dashbaord</h3>
     </div>
         <div class="py-3  w-full " >
             <div class="container w-full  flex flex-wrap   items-stretch   mb-7  justify-center  h-20">
-                <div class="bg-white overflow-hidden shadow-md sm:rounded-lg mr-10 w-80  p-10 h-24  bg-blue-grey sm:mb-3">
+                <div class="bg-white overflow-hidden shadow-md sm:rounded-lg mr-3 w-80  p-10 h-24  bg-blue-grey sm:mb-3">
                   <!--  <welcome />-->
                   Total employees
                 </div>
-                  <div class="bg-white overflow-hidden shadow-md sm:rounded-lg mr-10 w-80 h-24 p-10  bg-blue-grey sm:mb-3">
+                  <div class="bg-white overflow-hidden shadow-md sm:rounded-lg mr-3 w-80 h-24 p-10  bg-blue-grey sm:mb-3">
                   <!--  <welcome />-->
                  Present 
                 </div>
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="notification  ">
-                <h3  class = "p-3 opacity-60"> Notification</h3>
+                <h3  class = "p-3 opacity-60 font-body  font-bold"> Notification</h3>
             </div>
             <div class="bottom-bar container  p-7 flex flex-row w-full">
                 <div class = "leaveApp h-64 mx-3 bg-blue-grey w-2/5 shadow-md sm:rounded">
@@ -51,9 +51,6 @@
                         <div class="indicator w-3 h-3 rounded-full bg-status-declined ml-3 "></div>
                         <div class="status mx-1">Declined</div>
                     </div>
-
-
-
 
                 </div>
                 <div class = "notyet h-64 mx-3 bg-blue-grey w-3/5 mx-auto shadow-md sm:rounded">
