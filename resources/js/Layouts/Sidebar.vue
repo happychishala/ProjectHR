@@ -17,23 +17,23 @@
                                    <p class = "text-xs font-body font-bold mt-2">Dashboard</p>
                                 </div>
                                 </inertia-link>
-                                <inertia-link href>
+                                <inertia-link :href="route('payroll')">
                                 <div class="payroll p-3 mx-3 text-center  transition transition-shadow duration-300 hover:shadow-lg">
                                         <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md "><img :src="'/assets/icons/money.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
                                    <p class = "text-xs font-body font-bold mt-2">Payroll</p>
                                 </div>
                                 </inertia-link>
-                                  <inertia-link href="">
+                                  <inertia-link  :href ="route('employees')">
                                      <div class="employes p-3 mx-3 text-center transition transition-shadow duration-300   hover:shadow-lg">
                                         <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/emp.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
                                             <p class = "text-xs font-body font-bold mt-2">   Employees </p>
                                 </div>
                                   </inertia-link>
 
-                                  <inertia-link href="">
+                                  <inertia-link  :href="route('training')">
                                  <div class="employes p-3 mx-3 text-center  transition transition-shadow duration-300  hover:shadow-lg">
                                          <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/training.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
-                                          <p class = "text-xs font-body font-bold mt-2">   Training </p>
+                                          <p class = "text-xs font-body font-bold mt-2">Training</p>
                                 </div>
                                 </inertia-link>
 
@@ -43,13 +43,13 @@
                                             <hr>
                                             </div> 
                                 <div class="sub-modules flex flex-row flex-wrap justify-center my-10">
-                                   <inertia-link href="">
+                                   <inertia-link :href ="route('dept')">
                                     <div class="training p-3 mx-3 text-center transition transition-shadow duration-300  hover:shadow-lg">
                                             <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md"><img :src="'/assets/icons/dept.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
                                       <p class = "text-xs font-body font-bold mt-2"> Department</p>
                                     </div>
                                     </inertia-link>
-                                    <inertia-link href="">
+                                    <inertia-link :href="route('leave')">
                                     <div class="departments p-3 mx-3 text-center transition transition-shadow duration-300   hover:shadow-lg">
                                             <div class = "w-10 h-8 bg-white m-auto rounded-md shadow-md" > <img :src="'/assets/icons/leave.png'" class = "m-auto inline-block align-middle" style = "width:20px" alt="dash">  </div>
                                        <p class = "text-xs font-body font-bold mt-2"> Leave </p>

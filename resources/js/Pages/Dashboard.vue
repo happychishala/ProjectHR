@@ -31,7 +31,7 @@
                     <h3 class = "font-body font-bold uppercase"> -On Leave- </h3>
                      <p class = " font-body font-medium text-xs"> Employees currently on Leave</p>
                     </div>
-                          <h3 class = "count text-lg opacity-10 font-body font-bold ">12</h3>
+                          <h3 class = "count text-lg opacity-10 font-body font-bold ">13</h3>
                 </div>
             </div>
             <div class="notification  ">
@@ -48,7 +48,7 @@
                             <li class= "flex-auto"><div class="photo bg-white rounded-full h-10 w-10 "></div></li>
                             <li class= "flex-auto py-3"> <p class = "font-body font-bold ">Simon</p> </li>
                             <li class= "flex-auto py-3"><small class = "font-body text-xs">Vecation Leave</small> </li>
-                            <li class= "flex-auto py-5">  <div class="indicator w-2 h-2 rounded-full bg-status-pending  ml-1"></div></li>
+                            <li class= "flex-auto py-5">  <div class="animate-ping indicator w-2 h-2 rounded-full bg-status-pending  ml-1"></div></li>
                             <li class= "flex-auto py-5"><p class = "font-body text-xs">Pending</p></li>
                         </ul>
                         </inertia-link>
@@ -59,7 +59,7 @@
                             <li class= "flex-auto py-3"> <p class = "font-body font-bold">John</p> </li>
                             <li class= "flex-auto py-3"><small class = "font-body text-xs">Vecation Leave</small> </li>
                             <li class= "flex-auto py-5">  <div class="indicator w-2 h-2 rounded-full bg-status-approved  ml-1"></div></li>
-                            <li class= "flex-auto py-5"><p class = "text-xs font-body">Pending</p></li>                     
+                            <li class= "flex-auto py-5"><p class = "text-xs font-body">Approved</p></li>                     
                         </ul>
                         </inertia-link>
                         <inertia-link href="#">
