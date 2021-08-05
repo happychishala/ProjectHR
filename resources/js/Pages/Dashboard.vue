@@ -38,13 +38,13 @@
              <h3 class = "p-3 opacity-60 font-body font-bold">Notications</h3>
             </div>
             <div class="bottom-bar container  p-7 flex flex-row w-full">
-                <div class = "leaveApp h-64 mx-3 bg-blue-grey w-2/5  shadow-md sm:rounded">
+                <div class = "leaveApp h-64 mx-3  w-2/5  shadow-md sm:rounded pb-2">
                     <div class="laevnot container m-auto p-3   sm:rounded-sm">
                         <p class = "bg-green-main text-white rounded leading-normal text-xs py-3 font-body font-medium shadow-md "><span class = "font-body pl-3 font-bold m-auto uppercase ">Leave Applications</span></p>
                     </div>
                     <div class="applica overflow-hidden p-2">
                         <inertia-link href="">
-                        <ul class = "flex flex-wrap  justify-around items-stretch  transition transition-shadow duration-300 ease-in-out   hover:shadow-lg p-1 shadow-sm">
+                        <ul class = "flex flex-wrap  justify-around items-stretch  transition transition-shadow duration-300 ease-in-out   hover:shadow-lg p-1 shadow-sm  hover:bg-blue-grey">
                             <li class= "flex-auto"><div class="photo bg-white rounded-full h-10 w-10 "></div></li>
                             <li class= "flex-auto py-3"> <p class = "font-body font-bold ">Simon</p> </li>
                             <li class= "flex-auto py-3"><small class = "font-body text-xs">Vecation Leave</small> </li>
@@ -54,7 +54,7 @@
                         </inertia-link>
 
                         <inertia-link href = "#">
-                        <ul class = "flex flex-wrap  justify-around items-stretch   transition transition-shadow duration-300 ease-in-out  hover:shadow-lg p-1 shadow-sm">
+                        <ul class = "flex flex-wrap  justify-around items-stretch   transition transition-shadow duration-300 ease-in-out  hover:shadow-lg p-1 shadow-sm  hover:bg-blue-grey">
                             <li class= "flex-auto"><div class="photo bg-white rounded-full h-10 w-10 "></div></li>
                             <li class= "flex-auto py-3"> <p class = "font-body font-bold">John</p> </li>
                             <li class= "flex-auto py-3"><small class = "font-body text-xs">Vecation Leave</small> </li>
@@ -63,12 +63,12 @@
                         </ul>
                         </inertia-link>
                         <inertia-link href="#">
-                          <ul class = "flex flex-wrap  justify-around items-stretch shadow-sm  transition transition-shadow duration-300 ease-in-out  hover:shadow-lg p-1 ">
+                          <ul class = "flex flex-wrap  justify-around items-stretch shadow-sm  transition transition-shadow duration-300 ease-in-out  hover:shadow-lg p-1 hover:bg-blue-grey">
                             <li class= "flex-auto"><div class="photo bg-white rounded-full h-10 w-10 "></div></li>
                             <li class= "flex-auto py-3"> <p class = "font-body font-bold">Frank</p> </li>
                             <li class= "flex-auto py-3"><small class = "text-xs font-body">School Leave</small> </li>
-                            <li class= "flex-auto py-5">  <div class="indicator w-2 h-2 rounded-full bg-status-declined  ml-1"></div></li>
-                            <li class= "flex-auto py-5"><p class = "font-body text-xs">Declined</p></li>
+                            <li class= "flex-auto py-3">  <div class="indicator w-2 h-2 rounded-full bg-status-declined  ml-1"></div></li>
+                            <li class= "flex-auto py-3"><p class = "font-body text-xs">Declined</p></li>
                         </ul>
                         </inertia-link>
                     </div>
