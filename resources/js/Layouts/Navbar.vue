@@ -42,12 +42,7 @@
                                             My Profile
                                         </jet-dropdown-link>
                                         <div class="border-t opacity-20"></div>
-                                         <jet-dropdown-link :href="route('profile.show')">
-                                            Password
-                                        </jet-dropdown-link>
-                                        <div class="border-t opacity-20"></div>
-
-                                        <!-- Authentication -->
+                                           <!-- Authentication -->
                                         <form @submit.prevent="logout">
                                             <jet-dropdown-link as="button">
                                                 Log Out

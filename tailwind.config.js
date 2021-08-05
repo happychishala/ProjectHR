@@ -13,6 +13,12 @@ module.exports = {
 
     theme: {    
         extend: {
+            backgroundImage:theme =>({
+                'safe-data': "url('/assets/images/safe-data.jpg')",
+                'leave': "url('/assets/images/leave.jpg')",
+                'schedule': "url('/assets/images/schedule.jpg')",
+                'about': "url('/assets/images/about.jpg')",
+            }),
             colors:{
                 blue:{
                     grey:'#EFF3FF',
@@ -29,6 +35,7 @@ module.exports = {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 body:['Roboto'],
+                alt:['Josefin Sans'],
             },
         },
     },
