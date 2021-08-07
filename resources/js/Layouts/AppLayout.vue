@@ -11,12 +11,12 @@
            <navbar />
             <div>
                            <!-- Page Content -->
-                  <main>
+                  <main class = "bg-blue-grey h-5/6">
                 <slot></slot>
             </main>
             <footer class = "footer">
          <nav class="bg-white  text-center h-3 shadow-inner max-width-screen-lg ">
-          <p class = "px-3 pt-3 opacity-40"> &copy; ProjectHR 2021 </p>   
+          <p class = "px-3 pt-3 opacity-30 font-alt font-medium"> &copy; ProjectHR 2021 </p>   
          </nav>
             </footer>
             </div>

@@ -1,6 +1,6 @@
 <template>
   <nav>
-                     <div class ="bg-blue-grey h-screen font-body ">
+                     <div class ="shadow-xl h-screen font-body ">
                          <div class = "title mb px-16 pt-6 pb-16">
                           <jet-Application-Logo :href="route('dashboard')" :active="route().current('dashboard')">                           
                           </jet-Application-Logo>

@@ -1,13 +1,13 @@
 <template>
     <app-layout>
 <div>
-    <div class="heading">
-        <h3 class = "p-3 opacity-60 font-body font-bold">Dashbaord Overview</h3>
+    <div class="heading ">
+        <h3 class = "p-3 opacity-60 font-body font-bold text-md">Dashbaord Overview</h3>
     </div>
         <div class="py-3  w-full " >
             <div class="container w-full  flex flex-wrap justify-center p-1  h-44 mb-7 h-20">
             
-                <div class="bg-white overflow-hidden shadow-md sm:rounded mr-7 w-96 transition transition-shadow duration-300 ease-in-out flex flex-wrap hover:shadow-lg p-10 h-full  bg-blue-grey sm:mb-3">
+                <div class="bg-white overflow-hidden shadow-md sm:rounded mr-7 w-96 transition transition-shadow duration-300 ease-in-out flex flex-wrap hover:shadow-lg p-10 h-full  sm:mb-3">
                   <!--  <welcome />-->
                   <div>
                  <h2 class = "font-body font-bold uppercase">- Total employees -</h2>
@@ -17,7 +17,7 @@
                 </div>
               
                 
-                  <div class="bg-white overflow-hidden shadow-md sm:rounded mr-7 w-96 h-full transition transition-shadow duration-300 ease-in-out flex flex-wrap  p-10 hover:shadow-lg  bg-blue-grey sm:mb-3">
+                  <div class="bg-white overflow-hidden shadow-md sm:rounded mr-7 w-96 h-full transition transition-shadow duration-300 ease-in-out flex flex-wrap  p-10 hover:shadow-lg  sm:mb-3">
                   <!--  <welcome />-->
                   <div>
                    <h2 class = "font-body font-bold uppercase">-Present- </h2>
@@ -25,7 +25,7 @@
                    </div>
                  <h3 class = "count text-lg opacity-10 font-body font-bold ">187</h3>
                 </div>
-                  <div class="bg-white overflow-hidden shadow-md sm:rounded flex flex-wrap  w-96 h-full p-10 transition transition-shadow duration-300 ease-in-out  hover:shadow-lg bg-blue-grey sm:mb-3">
+                  <div class="bg-white overflow-hidden shadow-md sm:rounded flex flex-wrap  w-96 h-full p-10 transition transition-shadow duration-300 ease-in-out  hover:shadow-lg  sm:mb-3">
                   <!--  <welcome />-->
                   <div>
                     <h3 class = "font-body font-bold uppercase"> -On Leave- </h3>
@@ -34,11 +34,11 @@
                           <h3 class = "count text-lg opacity-10 font-body font-bold ">13</h3>
                 </div>
             </div>
-            <div class="notification  ">
-             <h3 class = "p-3 opacity-60 font-body font-bold">Notications</h3>
+            <div class="notification ">
+             <h3 class = "p-3 opacity-60 font-body font-bold text-md">Notications</h3>
             </div>
-            <div class="bottom-bar container  p-7 flex flex-row w-full">
-                <div class = "leaveApp h-64 mx-3  w-2/5  shadow-md sm:rounded pb-2">
+            <div class="bottom-bar container  p-5 flex flex-row w-full">
+                <div class = "leaveApp h-64 bg-white mx-3  w-2/5  shadow-md sm:rounded pb-2">
                     <div class="laevnot container m-auto p-3   sm:rounded-sm">
                         <p class = "bg-green-main text-white rounded leading-normal text-xs py-3 font-body font-medium shadow-md "><span class = "font-body pl-3 font-bold m-auto uppercase ">Leave Applications</span></p>
                     </div>
@@ -73,7 +73,7 @@
                         </inertia-link>
                     </div>
                 </div>
-                <div class = "notyet h-64 p-3 mx-3 bg-blue-grey w-3/5 mx-auto shadow-md sm:rounded">
+                <div class = "notyet h-64 p-3 mx-3 bg-white w-3/5 mx-auto shadow-md sm:rounded">
                 <tabs />
                 </div>
             </div>

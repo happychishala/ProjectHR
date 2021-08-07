@@ -9,7 +9,7 @@
             <!--    
                 -->
           
-                            <div id = "header" class = "px-20 h-screen mb-20">
+                            <div id = "header" class = "px-20 h-screen mb-20 ">
                                 <nav id = "main-nav " class = "flex justify-between py-10 overflow-hidden ">
                                       <div class = "title  ">                                  
                                       <jet-Application-Logo>                           
@@ -22,15 +22,15 @@
                                                 <li class = "px-5"> <a href="#benefit" class = "font-body font-bold" > Benefits</a> </li>
                                                 <li class = "px-5"> <a href="#about" class = "font-body font-bold"> About</a> </li>                                    
                                             </ul>
-                                      <inertia-link :href="route('login')" class=" border-4 border-green-main p-2 w-28 text-green-main font-body font-bold text-center rounded-md">
+                                      <inertia-link :href="route('login')" class=" border-4 border-green-main p-2 w-28 text-green-main font-body font-bold text-center rounded-md hover:bg-green-main hover:text-white">
                                                          Log in
                                                                          </inertia-link>
                                       </div>
                                  </nav>
-                                <div id="main" class = "flex  justify-between  h-5/6">
+                                <div id="main" class = "flex  justify-between  h-5/6 shadow-lg p-10">
                                         <div class = "h-full w-2/4">
-                                            <h1 class = "text-7xl py-10 font-alt font-bold leading-tight origin-left transition-transform translate-x-45">Increasing value through people! </h1>
-                                            <p class = " leading-tight font-alt font-medium">We believe a company's most valuable asset is it's human resource 
+                                            <h1 class = "text-7xl py-10 font-alt font-bold leading-tight text-letter-grey origin-left transition-transform translate-x-45">Increasing value t<span class = "text-green-main">hr</span>ough people! </h1>
+                                            <p class = " leading-tight font-alt font-medium">We believe a company's most valuable<strong class = "text-green-main"> asset. </strong> is it's human resource 
                                                     we therefore, pride ourselves in helping clients achieve a competitive 
                                                     advantage through their people   </p>
                                             <button href="#benefit" class = "animate-bounce my-10 p-2 w-48 text-white bg-green-main shadow-xl rounded-md font-body font-bold"> Learn More</button>
@@ -39,7 +39,7 @@
                                         <div  class = "border border-grey-main h-full w-2/4">
                                           <img :src="'/assets/icons/computer-work.png'" class = "" style = "width:100%;border:0" alt="dash">
                                         </div>
-                
+                a
                                 </div>
 
                             </div>

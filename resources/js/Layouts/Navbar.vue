@@ -1,15 +1,19 @@
 <template>
-   <nav class="bg-white border-b border-gray-100  max-width-screen-lg shadow-sm">
+   <nav class="bg-blue-grey  max-width-screen-lg shadow-sm ">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
-                        <div class="flex">
+                        <div class="flex  py-3">
                             <!-- Logo -->
-                   
+                   <div class=" flex flex-wrap ">
+                     <input type="text" placeholder="Search" class="focus:border-transparent  font-body   focus:ring-green-main focus:outline-none  bg-white rounded-full text-sm border-transparent  pl-10"/>
+                </div>
+
+
                             <!-- Navigation Links -->
-                            <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                             
-                            </div>
+                       <!--     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                                     </div>
+                                     -->
                         </div>
 
                         <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -17,8 +21,8 @@
                             <div class="ml-3 relative">
                                 <jet-dropdown align="right" width="48">
                                     <template #trigger>
-                                        <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                            <img class="h-8 w-8 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
+                                        <button v-if="$page.props.jetstream.managesProfilePhotos" class="flex text-sm bg-white hover:shadow-lg border-2 border-transparent rounded-full focus:outline-none focus:border-green-main focus:shadow-lg  hover:bg-white transition flex items-center">
+                                            <h3 class = "font-medium font-body text-md mx-5">{{$page.props.user.name}}</h3> <img class="h-8 w-8 rounded-full object-cover" :src="$page.props.user.profile_photo_url" :alt="$page.props.user.name" />
                                         </button>
 
                                         <span v-else class="inline-flex rounded-md">

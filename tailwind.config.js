@@ -23,6 +23,9 @@ module.exports = {
                 blue:{
                     grey:'#EFF3FF',
                 },
+                letter:{
+                    grey:'#3D3B44',
+                },
                 green:{
                     main: '#1BBA6E',
                 },

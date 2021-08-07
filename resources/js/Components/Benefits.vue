@@ -1,6 +1,6 @@
 <template>
-  <div class = "headings py-10">
-      <h1 class = "font-alt font-bold">BENEFITS</h1>
+  <div class = "headings p-10 my-16 shadow-lg  ">
+      <h1 class = "font-alt font-bold text-xl">BENEFITS</h1>
   </div>
   <div class = "cards flex h-full  " >
     <div class="card w-1/3 border h-4/6  shadow-xl rounded-lg">
@@ -50,9 +50,6 @@ will help you engage, produce & grow.</p>
     </div>
     <hr>
     </div>
-
-
-
   </div>
 </template>
 
