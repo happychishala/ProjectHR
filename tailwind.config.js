@@ -18,6 +18,7 @@ module.exports = {
                 'leave': "url('/assets/images/leave.jpg')",
                 'schedule': "url('/assets/images/schedule.jpg')",
                 'about': "url('/assets/images/about.jpg')",
+                'placeholder': "url('/assets/images/placeholder.jpg')"
             }),
             colors:{
                 blue:{
@@ -49,5 +50,5 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'),require('tailwind-scrollbar')],
 };

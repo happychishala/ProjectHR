@@ -1,6 +1,7 @@
 <template>
     <jet-action-section>
         <template #content>
+            <div class = "h-96 overflow-y-scroll scrollbar-thin scrollbar-thin scrollbar-thumb-green-main scrollbar-track-blue-grey">
             <h3 class="text-lg font-medium text-gray-900" v-if="twoFactorEnabled">
                 You have enabled two factor authentication.
             </h3>
@@ -10,7 +11,7 @@
             </h3>
 
             <div class="mt-3  text-sm text-gray-600">
-                <p>
+                <p class = "font-alt font-medium">
                     When two factor authentication is enabled, you will be prompted for a secure, random token during authentication. You may retrieve this token from your phone's Google Authenticator application.
                 </p>
             </div>
@@ -73,6 +74,7 @@
                         </jet-danger-button>
                     </jet-confirms-password>
                 </div>
+            </div>
             </div>
         </template>
     </jet-action-section>

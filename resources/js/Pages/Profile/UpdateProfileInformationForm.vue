@@ -24,7 +24,7 @@
                 </div>
 
                 <jet-secondary-button class="mt-2 mr-2" type="button" @click.prevent="selectNewPhoto">
-                    <small class = "text-xs uppercase font-body font-bold"> Select New</small>
+                    <small class = "text-xs uppercase  font-body font-bold"> Select New</small>
                 </jet-secondary-button>
 
                 <jet-secondary-button type="button" class="mt-2" @click.prevent="deletePhoto" v-if="user.profile_photo_path">

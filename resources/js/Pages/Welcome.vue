@@ -39,7 +39,7 @@
                                         <div  class = "border border-grey-main h-full w-2/4">
                                           <img :src="'/assets/icons/computer-work.png'" class = "" style = "width:100%;border:0" alt="dash">
                                         </div>
-                a
+                
                                 </div>
 
                             </div>

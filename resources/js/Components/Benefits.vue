@@ -3,12 +3,12 @@
       <h1 class = "font-alt font-bold text-xl">BENEFITS</h1>
   </div>
   <div class = "cards flex h-full  " >
-    <div class="card w-1/3 border h-4/6  shadow-xl rounded-lg">
+    <div class="card w-1/3   h-4/6  shadow-xl rounded-lg">
     <div class = "h-2/4 bg-safe-data bg-center bg-no-repeat bg-cover ">
 
     </div>
 
-     <div  id= "desc" class = "border p-2 w-3/4 m-auto -mt-3 text-center shadow-lg rounded-md bg-white ">
+     <div  id= "desc" class = " p-2 w-3/4 m-auto -mt-3 text-center shadow-lg rounded-md bg-white ">
       <h5 class = "font-alt font-medium">Keep your data safe</h5>
     </div>
 
@@ -21,10 +21,10 @@ authentication system.</p>
     </div>
 
     
-     <div class="card w-1/3 border h-4/6  shadow-xl rounded-lg mx-14">
+     <div class="card w-1/3 h-4/6  shadow-xl rounded-lg mx-14">
 <div class = "h-2/4 bg-leave bg-center bg-no-repeat bg-cover">
     </div>
-     <div  id= "desc" class = " border p-2 w-3/4 m-auto -mt-3 text-center shadow-lg rounded-md bg-white">
+     <div  id= "desc" class = "  p-2 w-3/4 m-auto -mt-3 text-center shadow-lg rounded-md bg-white">
       <h5 class = "font-alt font-medium">Leave Management</h5>
     </div>
  <div  id= "desc" class = " p-2 w-3/4 m-auto  bg-white my-8">
@@ -37,7 +37,7 @@ notifications regarding the leave status.</p>
 
 
 
-     <div class="card w-1/3 border h-4/6  shadow-xl rounded-lg">
+     <div class="card w-1/3  h-4/6  shadow-xl rounded-lg">
 <div class = "h-2/4 bg-schedule bg-center bg-no-repeat bg-cover">
     </div>
     <div  id= "desc" class = " border p-2 w-3/4 m-auto -mt-3 text-center shadow-lg rounded-md bg-white">

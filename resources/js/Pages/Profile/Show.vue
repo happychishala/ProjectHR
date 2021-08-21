@@ -7,7 +7,7 @@
         </template>
 
         <div class = "">
-            <div class=" mx-auto py-10 sm:px-6 lg:px-8">
+            <div class=" mx-auto h-full  sm:px-6 lg:px-8">
                 <profile-tabs >
                     <template v-slot:profile>
                      <div v-if="$page.props.jetstream.canUpdateProfileInformation">

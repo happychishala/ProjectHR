@@ -1,7 +1,7 @@
 <template>
     <div>
         <jet-banner />
-        <div class="min-h-screen bg-white">
+        <div class="min-h-screen bg-white overflow-hidden ">
          <div class ="flex flex-row ">
              <div class = "w-72 h-screen sidebar">
                  <sidebar />
@@ -11,7 +11,7 @@
            <navbar />
             <div>
                            <!-- Page Content -->
-                  <main class = "bg-blue-grey h-5/6">
+                  <main class = "bg-blue-grey h-5/6  overflow-y-scroll scrollbar-thin scrollbar-thin scrollbar-thumb-green-main scrollbar-track-white">
                 <slot></slot>
             </main>
             <footer class = "footer">
