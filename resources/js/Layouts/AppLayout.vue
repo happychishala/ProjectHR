@@ -10,6 +10,7 @@
              <div class = "w-screen"><!-- content and navbar div -->
            <navbar />
             <div>
+               
                            <!-- Page Content -->
                   <main class = "bg-blue-grey h-5/6  overflow-y-scroll scrollbar-thin scrollbar-thin scrollbar-thumb-green-main scrollbar-track-white">
                 <slot></slot>
@@ -29,7 +30,7 @@
 </template>
 
 <script>
-
+    
     import Navbar from '@/Layouts/Navbar'
     import Sidebar from '@/Layouts/Sidebar'
     import JetApplicationMark from '@/Jetstream/ApplicationMark'
@@ -39,6 +40,7 @@
     import JetNavLink from '@/Jetstream/NavLink'
     import JetResponsiveNavLink from '@/Jetstream/ResponsiveNavLink'
 
+ 
     export default {
         components: {
             Navbar,

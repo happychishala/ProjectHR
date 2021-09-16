@@ -2,6 +2,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Employee;
 use App\Http\Controllers\EmployeesController;
 use App\Http\Controllers\PayrollController;
 use App\Http\Controllers\TrainingController;
@@ -18,11 +19,15 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    $all_emp = Employee::all()->count();
+    return Inertia::render('Dashboard')->with('all_emp',$all_emp);
 })->name('dashboard');
 Route::middleware(['auth:sanctum', 'verified'])->resource('/employees',EmployeesController::class)->names([
-    'index' => 'employees'
+    'index' => 'employees',
+    'store'=>'employees.store',
 ]) ;
+Route::post('employees.store', [EmployeesController::class, 'store'])->name('employees.strore');
+
 Route::middleware(['auth:sanctum', 'verified'])->resource('/payroll',PayrollController::class)->names([
     'index' => 'payroll'
 ]) ;

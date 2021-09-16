@@ -1315,6 +1315,9 @@ select{
 .w-2\/3{
 	width: 66.666667%;
 }
+.w-2\/4{
+	width: 50%;
+}
 .w-11\/12{
 	width: 91.666667%;
 }
@@ -1338,9 +1341,6 @@ select{
 }
 .w-28{
 	width: 7rem;
-}
-.w-2\/4{
-	width: 50%;
 }
 .w-40{
 	width: 10rem;
@@ -1368,6 +1368,9 @@ select{
 }
 .max-w-6xl{
 	max-width: 72rem;
+}
+.max-w-full{
+	max-width: 100%;
 }
 .flex-1{
 	flex: 1 1 0%;
@@ -1533,6 +1536,11 @@ select{
 	margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+	--tw-space-y-reverse: 0;
+	margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+	margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
 .overflow-hidden{
 	overflow: hidden;
 }
@@ -1616,6 +1624,9 @@ select{
 }
 .border-r-2{
 	border-right-width: 2px;
+}
+.border-l-2{
+	border-left-width: 2px;
 }
 .border-gray-300{
 	--tw-border-opacity: 1;
@@ -1901,6 +1912,9 @@ select{
 .pl-4{
 	padding-left: 1rem;
 }
+.pl-6{
+	padding-left: 1.5rem;
+}
 .text-left{
 	text-align: left;
 }
@@ -2068,12 +2082,36 @@ select{
 	--tw-text-opacity: 1;
 	color: rgba(61, 59, 68, var(--tw-text-opacity));
 }
+.text-opacity-50{
+	--tw-text-opacity: 0.5;
+}
 .underline{
 	text-decoration: underline;
 }
 .antialiased{
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+.placeholder-gray-500::-moz-placeholder{
+	--tw-placeholder-opacity: 1;
+	color: rgba(107, 114, 128, var(--tw-placeholder-opacity));
+}
+.placeholder-gray-500:-ms-input-placeholder{
+	--tw-placeholder-opacity: 1;
+	color: rgba(107, 114, 128, var(--tw-placeholder-opacity));
+}
+.placeholder-gray-500::placeholder{
+	--tw-placeholder-opacity: 1;
+	color: rgba(107, 114, 128, var(--tw-placeholder-opacity));
+}
+.placeholder-opacity-50::-moz-placeholder{
+	--tw-placeholder-opacity: 0.5;
+}
+.placeholder-opacity-50:-ms-input-placeholder{
+	--tw-placeholder-opacity: 0.5;
+}
+.placeholder-opacity-50::placeholder{
+	--tw-placeholder-opacity: 0.5;
 }
 .opacity-0{
 	opacity: 0;
@@ -2133,6 +2171,10 @@ select{
 	--tw-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.outline-none{
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+}
 .ring-1{
 	--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
 	--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
@@ -2145,6 +2187,10 @@ select{
 .ring-black{
 	--tw-ring-opacity: 1;
 	--tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
+}
+.ring-green-main{
+	--tw-ring-opacity: 1;
+	--tw-ring-color: rgba(27, 186, 110, var(--tw-ring-opacity));
 }
 .ring-opacity-5{
 	--tw-ring-opacity: 0.05;

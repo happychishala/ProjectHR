@@ -4,14 +4,14 @@
   <!--  <button class="addNew p-2 bg-green-main w-40 text-white font-body font-bold rounded-md"> Add New</button>-->
 </div>
 
-<div id="employinfo" class = "flex  h-1/2  pl-7 pb-5 pr-7">
+<div id="employinfo" class = "flex  h-1/2  pl-7 pb-5 pr-7 " :class="[select_emp? 'hidden': '' ]" >
         <div class = "profiledata bg-white shadow-md h-80 rounded-md w-2/4 p-5 flex">
         <div class="personalinfo border-r-2 border-opacity-40 pr-6  w-2/5">
             <div class = "photo bg-placeholder rounded-full bg-cover m-auto w-32 h-32">
 
             </div>
                 <div class = "name p-2">
-                    <h1 class = "text-center font-alt font-bold text-xl">Timothy Kapeza</h1>
+                    <h1 class = "text-center font-alt font-bold text-xl"> Timothy Kapeza</h1>
                 </div>
                 <div class = "email">
                     <p class ="text-center font-alt font-medium text-md">Timmy@hr.com</p>
@@ -70,7 +70,7 @@
 
         <div class="appraisals h-80 mb-3 shadow-md rounded-md overflow-y-scroll scrollbar-thin scrollbar-thin scrollbar-thumb-green-main scrollbar-track-white bg-white mx-6 p-3 w-1/4">
                 <div id = "title" class= "p-2 shadow-sm bg-white sticky top-0 ">
-                            <h3 class = "font-body font-medium ">Appraisal</h3>                    
+                            <h3 class = "font-body font-medium ">Appraisal </h3>                    
                 </div>
            
                 <div class="appraisal mb-3 p-4 bg-blue-grey h-4/5">
@@ -113,6 +113,26 @@
                         <h3 class = "font-alt font-medium 3/4">Testimonial</h3>
                         <button class ="p-1 border-2 border-green-main text-green-main rounded-md text-sm font-body font-bold w-1/4" > View </button>
                 </div>
+                
+                <div class ="doc p-2 mb-2 flex rounded-md bg-blue-grey justify-between border-l-4 border-green-main items-center">
+                        <h3 class = "font-alt font-medium 3/4">Testimonial</h3>
+                        <button class ="p-1 border-2 border-green-main text-green-main rounded-md text-sm font-body font-bold w-1/4" > View </button>
+                </div>
+                
+                <div class ="doc p-2 mb-2 flex rounded-md bg-blue-grey justify-between border-l-4 border-green-main items-center">
+                        <h3 class = "font-alt font-medium 3/4">Testimonial</h3>
+                        <button class ="p-1 border-2 border-green-main text-green-main rounded-md text-sm font-body font-bold w-1/4" > View </button>
+                </div>
+                
+                <div class ="doc p-2 mb-2 flex rounded-md bg-blue-grey justify-between border-l-4 border-green-main items-center">
+                        <h3 class = "font-alt font-medium 3/4">Testimonial</h3>
+                        <button class ="p-1 border-2 border-green-main text-green-main rounded-md text-sm font-body font-bold w-1/4" > View </button>
+                </div>
+                
+                <div class ="doc p-2 mb-2 flex rounded-md bg-blue-grey justify-between border-l-4 border-green-main items-center">
+                        <h3 class = "font-alt font-medium 3/4">Testimonial</h3>
+                        <button class ="p-1 border-2 border-green-main text-green-main rounded-md text-sm font-body font-bold w-1/4" > View </button>
+                </div>
 
            
 
@@ -120,51 +140,51 @@
 
 </div>
 
-<div id="allemployees" class = "flex pl-7 pb-5 pr-7">
-        <div class = "emptable shadow-md   h-64  bg-white rounded-md w-3/4 mr-6 p-2">
-                  <div id = "tit;le" class= "p-2 bg-blue-grey rounded-full w-2/4">
+<div id="allemployees" class = "flex pl-7 pb-5 pr-7  h-4/5" >
+        <div class = "emptable shadow-md bg-white rounded-md w-3/4 max-w-3/4 mr-6 p-2">
+                  <div id = "tit;le" class= "p-2 bg-blue-grey rounded-full w-2/4 flex">
                             <button class = "bg-white rounded-full p-2 font-body font-medium shadow-md w-32">Department</button>
-                            <button class = "bg-white rounded-full p-2 font-body font-medium shadow-md w-32 mx-4">Add New</button>
+                        <form-model v-bind:create_emp="create_emp"><button class = "bg-white rounded-full p-2 font-body font-medium shadow-md w-32 mx-4">Add New</button> </form-model>  
                             
                 </div>
 
                  <div class="bg-white rounded-md shadow overflow-x-auto">
-      <table class="w-full whitespace-nowrap">
+      <table class="w-3/4 max-w-3/4 whitespace-nowrap">
         <tr class="text-left font-medium font-body mb-4">
-          <th class="px-6 pt-6 pb-4">Fullname </th>
+          <th class="px-6 pt-6 pb-4  " >Fullname {{$page.props.flash.message}} </th>
           <th class="px-6 pt-6 pb-4">Email</th>
           <th class="px-6 pt-6 pb-4">Gender</th>
-           <th class="px-6 pt-6 pb-4" >Status</th>
+           <th class="px-6 pt-6 pb-4" >Address</th>
           <th class="px-6 pt-6 pb-4"  >Position</th>
           
         </tr>
-        <tr  class="hover:bg-blue-grey focus-within:bg-blue-grey font-alt">
+        <tr   v-on:click="show_emp"  v-for = "employee in employees" :key="employee.id" class="hover:bg-blue-grey focus-within:bg-blue-grey font-alt">
           <td class="border-t">
-            <inertia-link href="#" class="px-6 py-4 flex items-center focus:text-indigo-500">
-            Charles Ngalasa 
-            </inertia-link>
+            <div class="px-6 py-4 flex items-center focus:text-indigo-500">
+            {{ employee.firstname }} {{ employee.lastname }}
+            </div>
           </td>
           <td class="border-t">
-            <inertia-link href="" class="px-6 py-4 flex items-center" tabindex="-1">
+            <div class="px-6 py-4 flex items-center" tabindex="-1">
               <div >
-                guru@hr.com
+                {{ employee.email}}
               </div>
-            </inertia-link>
+            </div>
           </td>
           <td class="border-t">
-            <inertia-link href="" class="px-6 py-4 flex items-center" tabindex="-1">
-           Male
-            </inertia-link>
+            <div class="px-6 py-4 flex items-center" tabindex="-1">
+          {{ employee.gender}}
+            </div>
           </td>
           <td class="border-t">
-            <inertia-link href="" class="px-6 py-4 flex items-center" tabindex="-1">
-                    Member
-            </inertia-link>
+            <div   class="px-6 py-4 flex items-center" tabindex="-1">
+                   {{employee.address}}
+            </div>
           </td>
           <td class="border-t w-px">
-            <inertia-link href=""  class="px-4 flex " >
-                    Cadre
-            </inertia-link>
+            <div  class="px-4 flex " >
+                    {{ employee.position}}
+            </div>
           </td>
         </tr>
         
@@ -189,7 +209,7 @@
                     <p class = "font-alt text-sm">Date : 23/12/2022</p>
                 </div>
 
-             
+       
         </div>
 
 </div>
@@ -199,9 +219,30 @@
 
 <script>
 import AppLayout from '@/Layouts/AppLayout'
+import FormModel from '@/Components/FormModel'
+
 export default {
+ props:{
+         employees:Array,
+         create_emp:String,
+ 
+ },       
+ data(){
+         return {           
+                        select_emp:true,
+         }
+ },
+ methods:{
+      show_emp(){
+                  return this.select_emp = !this.select_emp;
+         }
+ },
+ computed:{
+            
+ },
 components :{
     AppLayout,
+    FormModel,
 }
 
 }

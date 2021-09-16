@@ -2,6 +2,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use Illuminate\Validation\Rule;
+use URL;
+use App\Models\Employee;
 class employeesController extends Controller
 {
     /**
@@ -11,7 +14,8 @@ class employeesController extends Controller
      */
     public function index()
     {
-      return Inertia::render('Employees/Index');
+    $employees = Employee::all();
+      return Inertia::render('Employees/Index',['employees' =>$employees,'hello' => 'hi' ,'create_emp'=>URL::route('employees.store')]);
     }
 
     /**
@@ -32,7 +36,34 @@ class employeesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      /*  Request::validate([
+            'firstname' => ['required', 'max:50'],
+            'lastname' => ['required', 'max:50'],
+            'email' => ['required', 'max:50', 'email', Rule::unique('users')],
+            'address' => ['nullable'],
+            'position' => ['required'],
+            'mobile' => ['nullable'],
+            'deptID' => ['nullable'],
+            'gender' => ['nullable'],
+            'maritalStatus' => ['nullable'],
+        ]);
+*/        
+        //$emp = $request->all();
+        //dd($emp);
+     $emp  = Employee::create([
+         'firstname' =>$request->input('firstname'),
+         'lastname' => $request->input('lastname'),
+         'address' =>$request->input('address'),
+         'email' =>$request->input('email'),
+         'position' =>$request->input('position'),
+         'mobile' =>$request->input('mobile'),
+         'deptID' =>$request->input('deptID'),
+         'gender' => $request->input('gender'),
+         'maritalStatus' => $request->input('maritalStatus'),
+     ]);
+     notify()->success('Laravel Notify is awesome!');
+     return redirect('/employees')->with('message','Employee Added successfully');
+    
     }
 
     /**

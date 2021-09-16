@@ -24,9 +24,9 @@ class CreateEmployeesTable extends Migration
             $table->Integer('mobile');
             $table->Integer('deptID');
             $table->string('gender',100);
-            $table->string('marital_status',100);
-            $table->timestamps('startDate');
-            $table->date('enddate');
+            $table->string('maritalStatus',100);
+            $table->date('startDate');
+            $table->date('endDate')->nullable();
             $table->double('salary',15,6);             
             $table->timestamps();
         });

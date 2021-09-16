@@ -2,7 +2,7 @@
     <app-layout>
 <div>
     <div class="heading ">
-        <h3 class = "p-3 opacity-60 font-body font-bold text-md">Dashbaord Overview</h3>
+        <h3 class = "p-3 opacity-60 font-body font-bold text-md">Dashbaord Overview </h3>
     </div>
         <div class="py-3  w-full " >
             <div class="container w-full  flex flex-wrap justify-center p-1  h-44 mb-7 h-20">
@@ -13,7 +13,7 @@
                  <h2 class = "font-body font-bold uppercase">- Total employees -</h2>
                   <p class = " font-body font-medium text-xs"> Total human resource in the organization</p>
                  </div>
-                 <h3 class =" count text-lg opacity-10 font-body font-bold "> 300</h3>
+                 <h3 class =" count text-lg opacity-10 font-body font-bold "> {{ all_emp}}</h3>
                 </div>
               
                 
@@ -89,6 +89,7 @@
     import Tabs from '@/Components/Tabs'
 
     export default {
+        props:['all_emp'],
         components: {
             Tabs,
             AppLayout,
