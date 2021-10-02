@@ -1,7 +1,7 @@
 <template>
     <modal :show="show" :max-width="maxWidth" :closeable="closeable" @close="close">
         <div class="px-6 py-4">
-            <div class="text-lg font-body border-l-4 border-green-main shadow-sm p-3 rounded-md pl-6">
+            <div class="text-lg font-body border-l-4 border-r-4 border-green-main shadow-sm p-3 rounded-md pl-6">
                 <slot name="title">
                 </slot>
             </div>
@@ -24,13 +24,13 @@
     import Modal from './Modal'
 
     export default {
-        emits: ['close'],
+        
 
         components: {
             Modal,
         },
 
-        props: {
+        props: { 
             show: {
                 default: false
             },

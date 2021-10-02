@@ -28,7 +28,7 @@ module.exports = {
                     grey:'#3D3B44',
                 },
                 green:{
-                    main: '#1BBA6E',
+                    main: '#2083F8',
                 },
                 status:{
                     pending:'#84E8F4',

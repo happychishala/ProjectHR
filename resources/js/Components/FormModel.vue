@@ -1,10 +1,10 @@
 <template>
     <div>
-        <span @click="openMode">
+        <span @click="openModel" v-on:checke="openEdit()">
             <slot />
         </span>
 
-        <jet-dialog-modal :show="addnew" @close="closeModal">
+        <jet-dialog-modal :show="addnew"  @close="closeModal">
             <template #title>
                 {{ title }}
             </template>
@@ -15,7 +15,7 @@
                         <div class="flex space-between">
                             <div class="p-2 flex flex-col space-y-2 w-2/4">
                                 <label for="Firstname" class="font-body"
-                                    >Firstname
+                                    >Firstname  
                                 </label>
                                 <input
                                     type="text"
@@ -33,6 +33,9 @@
                                         focus:border-green-main
                                     "
                                 />
+                                <div  v-if="$page.props.errors.firstname">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.firstname }}</small>  
+                                </div>
                             </div>
 
                             <div class="p-2 flex flex-col space-y-2 w-2/4">
@@ -54,7 +57,11 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.lastname">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.lastname }}</small>  
+                                </div>
                             </div>
+                           
                         </div>
 
                         <div class="flex space-between">
@@ -77,7 +84,11 @@
                                         focus:border-green-main
                                     "
                                 />
+                                    <div  v-if="$page.props.errors.address">
+                                     <small class="text-red-500 font-body "> {{$page.props.errors.address }}</small>  
+                                </div>
                             </div>
+                         
 
                             <div class="p-2 flex flex-col space-y-2 w-2/4">
                                 <label for="Email" class="font-body"
@@ -98,7 +109,11 @@
                                         focus:border-green-main
                                     "
                                 />
+                                        <div  v-if="$page.props.errors.email">
+                                     <small class="text-red-500 font-body "> {{$page.props.errors.email}}</small>  
+                                </div>
                             </div>
+                         
                         </div>
 
                         <div class="flex space-between">
@@ -119,6 +134,9 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.nrc">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.nrc }}</small>  
+                                </div>
                             </div>
 
                             <div class="p-2 flex flex-col space-y-2 w-2/4">
@@ -140,6 +158,9 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.position">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.position }}</small>  
+                                </div>
                             </div>
                         </div>
 
@@ -163,6 +184,9 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.mobile">
+                                     <small class="text-red-500 font-body "> {{$page.props.errors.mobile}}</small>  
+                                </div>
                             </div>
 
                             <div class="p-2 flex flex-col space-y-2 w-2/4">
@@ -185,9 +209,9 @@
                                 >
                                     <option
                                         value=""
-                                        class="font-grey-500 text-opacity-50"
+                                        
                                     >
-                                        Select Department
+                                       <small class="font-grey-500 text-opacity-50"> Select Department</small>
                                     </option>
                                     <option type="text" value="1">
                                         Human Resource
@@ -196,6 +220,9 @@
                                         Accounts
                                     </option>
                                 </select>
+                                  <div  v-if="$page.props.errors.deptID">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.deptID}}</small>  
+                                </div>
                             </div>
                         </div>
 
@@ -219,6 +246,9 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.gender">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.gender}}</small>  
+                                </div>
                             </div>
 
                             <div class="p-2 flex flex-col space-y-2 w-2/4">
@@ -240,6 +270,9 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.maritalStatus">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.maritalStatus }}</small>  
+                                </div>
                             </div>
                         </div>
 
@@ -263,6 +296,9 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.start_date">
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.start_date}}</small>  
+                                </div>
                             </div>
 
                             <div class="p-2 flex flex-col space-y-2 w-2/4">
@@ -283,15 +319,20 @@
                                         focus:border-green-main
                                     "
                                 />
+                                  <div  v-if="$page.props.errors.salary">
+                                      {{ $page.props.errors}}
+                                     <small class="text-red-500 font-body "> {{ $page.props.errors.salary}}</small>  
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button type="submit">submit</button>
+                   
+                    
                 </form>
             </template>
 
             <template #footer>
-                <jet-button @click="closeModal"> Cancel </jet-button>
+            <jet-button @click="createemp" :disabled="form.processing">Create </jet-button> <jet-button @click="resetform">reset </jet-button>     <jet-button @click="closeModal"> Cancel </jet-button>
             </template>
         </jet-dialog-modal>
     </div>
@@ -300,7 +341,7 @@
 <script>
 import JetDialogModal from "@/Jetstream/DialogModal";
 import JetButton from "@/Jetstream/Button";
-
+ 
 export default {
     props: {
         title: {
@@ -308,9 +349,12 @@ export default {
         },
         create_emp: String,
     },
+
+ 
     data() {
         return {
             addnew: false,
+            something:true,
             form: {
                 firstname: "",
                 lastname: "",
@@ -332,16 +376,42 @@ export default {
         JetDialogModal,
         JetButton,
     },
+   
     methods: {
-        openMode() {
+        openModel() {
             this.addnew = true;
         },
+           
         createemp() {
-            this.$inertia.post("/employees.store", this.form);
-            this.addnew = false;
+            this.$inertia.post("/employees.store",this.form,{
+            preserveScroll: true,
+            onSuccess: () => {
+           this.resetform();
+           
+           this.addnew=false;      
+             },
+});
+
         },
         closeModal() {
             this.addnew = false;
+        },
+
+          resetform() {
+            this.form= {
+                firstname: "",
+                lastname: "",
+                address: "",
+                email: "",
+                nrc: null,
+                position: "",
+                mobile: null,
+                dept: null,
+                gender: "",
+                marital_status: "",
+                start_date: null,
+                salary: null,
+            };
         },
     },
 };

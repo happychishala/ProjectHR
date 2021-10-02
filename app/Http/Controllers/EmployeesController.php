@@ -15,7 +15,8 @@ class employeesController extends Controller
     public function index()
     {
     $employees = Employee::all();
-      return Inertia::render('Employees/Index',['employees' =>$employees,'hello' => 'hi' ,'create_emp'=>URL::route('employees.store')]);
+    $check_emp = Employee::all()->count();
+      return Inertia::render('Employees/Index',['employees' =>$employees,'check_emp' => $check_emp ,'create_emp'=>URL::route('employees.store')]);
     }
 
     /**
@@ -36,20 +37,22 @@ class employeesController extends Controller
      */
     public function store(Request $request)
     {
-      /*  Request::validate([
+      $validate = $request->validate([
             'firstname' => ['required', 'max:50'],
             'lastname' => ['required', 'max:50'],
-            'email' => ['required', 'max:50', 'email', Rule::unique('users')],
-            'address' => ['nullable'],
+            'email' => ['required', 'max:50', 'email'],
+            'address' => ['required'],
+            'nrc' => ['required'],
             'position' => ['required'],
-            'mobile' => ['nullable'],
-            'deptID' => ['nullable'],
-            'gender' => ['nullable'],
-            'maritalStatus' => ['nullable'],
+            'mobile' => ['required'],
+            'deptID' => ['required'],
+            'gender' => ['required'],
+            'salary' => ['required'],
+            'start_date' => ['required'],
+            'maritalStatus' => ['required'],
         ]);
-*/        
-        //$emp = $request->all();
-        //dd($emp);
+  
+
      $emp  = Employee::create([
          'firstname' =>$request->input('firstname'),
          'lastname' => $request->input('lastname'),
@@ -61,7 +64,7 @@ class employeesController extends Controller
          'gender' => $request->input('gender'),
          'maritalStatus' => $request->input('maritalStatus'),
      ]);
-     notify()->success('Laravel Notify is awesome!');
+     
      return redirect('/employees')->with('message','Employee Added successfully');
     
     }
@@ -74,7 +77,8 @@ class employeesController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = Employee::find(1);
+        return inertia::render('Employees/Index',['user'=>$user]);
     }
 
     /**
@@ -85,7 +89,7 @@ class employeesController extends Controller
      */
     public function edit($id)
     {
-        //
+         
     }
 
     /**

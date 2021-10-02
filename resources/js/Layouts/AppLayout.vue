@@ -6,7 +6,7 @@
              <div class = "w-72 h-screen sidebar">
                  <sidebar />
              </div>
-             
+         
              <div class = "w-screen"><!-- content and navbar div -->
            <navbar />
             <div>

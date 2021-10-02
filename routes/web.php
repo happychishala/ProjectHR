@@ -22,11 +22,17 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $all_emp = Employee::all()->count();
     return Inertia::render('Dashboard')->with('all_emp',$all_emp);
 })->name('dashboard');
+
 Route::middleware(['auth:sanctum', 'verified'])->resource('/employees',EmployeesController::class)->names([
     'index' => 'employees',
     'store'=>'employees.store',
 ]) ;
-Route::post('employees.store', [EmployeesController::class, 'store'])->name('employees.strore');
+Route::post('/employees.store', [EmployeesController::class, 'store'])->name('employees.store');
+
+Route::get('/users/{id}', function (Request $request, $id) {
+    $users = Employee::find($id);
+    return $users;
+});
 
 Route::middleware(['auth:sanctum', 'verified'])->resource('/payroll',PayrollController::class)->names([
     'index' => 'payroll'
